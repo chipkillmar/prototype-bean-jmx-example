@@ -21,16 +21,16 @@ public class PersonConfiguration {
             // Exclude the singleton "person" bean from the MBean exporter, to prevent this
             // NoSuchBeanDefinitionException:
 
-            /*
-                ***************************
-                APPLICATION FAILED TO START
-                ***************************
 
-                Description:
+            // ***************************
+            // APPLICATION FAILED TO START
+            // ***************************
+            //
+            // Description:
+            //
+            // Parameter 0 of constructor in com.chipkillmar.Person required a bean of type 'com.chipkillmar.Address'
+            // that could not be found.
 
-                Parameter 0 of constructor in com.chipkillmar.Person required a bean of type 'com.chipkillmar.Address'
-                that could not be found.
-             */
             exporter.addExcludedBean("person");
         }
         return true;
